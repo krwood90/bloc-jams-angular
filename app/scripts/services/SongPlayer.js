@@ -73,6 +73,8 @@
          */
         SongPlayer.currentTime = null;
 
+        SongPlayer.volume = 50;
+
         /**
          * @function play
          * @desc Plays a new song when clicked, or plays the current song which has been paused
@@ -148,6 +150,12 @@
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
             }
         };
 
